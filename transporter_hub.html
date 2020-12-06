@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+<title>Havells | Dashboard</title>
+<link rel="shortcut icon" href="images/favicon.png" type="image/vnd.microsoft.icon"/>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="css/responsive.dataTables.min.css" rel="stylesheet">
+<link href="css/scrollbar.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<!--<link href="fontawesome/css/all.css" type="text/css" rel="stylesheet">-->
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="js/scrollbar.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- <script type="text/javascript" src="fontawesome/js/all.js"></script> -->
+<script type="text/javascript">
+$(window).load(function(){
+ $(".box-scroll").mCustomScrollbar({
+	 scrollInertia:150
+	 });				
+});
+</script>
+</head>
+<body>
+<!--[Header]-->
+<header id="header">
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg">
+			<a class="navbar-brand" href="index.html"><img src="images/logo-havells.png"></a>
+			<div class="toggle-btn"><span class="icon-arrow"></span></div>
+			<div class="collapse navbar-collapse d-flex justify-content-end top-menu">
+				<ul class="navbar-nav">
+				  <li class="nav-item">
+					<a class="nav-link" href="#"><i class="fas fa-map-marker-alt"></i>Noida Warehouse</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="btn-white rounded-circle"><i class="fas fa-user"></i></span> Dev prakash</a>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="transporter_hub">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+				  </div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#"><i class="fas fa-power-off"></i></a>
+				  </li>
+				</ul>
+			  </div>
+		</nav>
+	</div>
+</header>
+<!--[/Header]-->
+<!--[Dashboard]-->
+<section class="dashboard">
+<!--[Aside]-->
+	<aside class="sidebar box-scroll">
+		<ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="far fa-edit"></i>  Vehicle/Driver Registration</a>
+                    <ul id="submenu-1" class="collapse">
+                        <li><a href="#">SUBMENU 1.1</a></li>
+                        <li><a href="#">SUBMENU 1.2</a></li>
+                        <li><a href="#">SUBMENU 1.3</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="transporter_hub.html"><i class="fas fa-truck-moving"></i> Transporter Hub</a></li>
+                <li><a href="vehicle_inward.html"><i class="fas fa-cart-plus"></i> Vehicle Inward</a></li>
+                <li><a href="outward_entry.html"><i class="fas fa-dolly-flatbed"></i> Outward Entry</a></li>
+            </ul>
+	</aside>
+<!--[/Aside]-->	
+	<section class="container-fluid">
+		<div class="contant-box">
+			<header class="header-title">
+				<h1 class="title">Transporter Hub (Admin)</h1>
+			</header>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label>Hub Name<span class="required">*</span></label>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label>Hub Address<span class="required">*</span></label>
+						<select  class="form-control basic-single" name="Business User">
+							<option value="bs">Vehicle Size</option>
+							<option value="bs">Vehicle Size</option>
+							<option value="bs">Vehicle Size</option>
+							<option value="bs">Vehicle Size</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label>Hub Pin Code<span class="required">*</span></label>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label>Transporter Code</label>
+						<input type="text" class="form-control search-input">
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label>Transporter Name</label>
+						<input type="text" class="form-control search-input">
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label class="btn-block">Status</label>
+						<div class="md-radio">
+							<input type="radio" name="radio" id="radio01">
+							<label for="radio01">Active</label>
+						</div>
+						<div class="md-radio">
+							<input type="radio" name="radio" id="radio02">
+							<label for="radio02">Inactive</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="">
+				<button type="button" class="btn btn-red btn-sm witdh100">Save</button>
+				<button type="button" class="btn btn-gray btn-sm witdh100">Edit</button>
+			</div>
+			</div>
+			<div class="contant-box">
+				<h4>Registration List</h4>
+			<div class="table-responsive">
+			  <table class="table list-table table-bordered">
+				<thead>
+					<tr>
+						<th width="100">Vehicle Name</th>
+						<th width="160">Description</th>
+						<th>Vehicle Size</th>
+						<th>Vehicle No.</th>
+						<th>Transporter Code</th>
+						<th>Transporter Name</th>
+						<th>Is Driver Map</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem Ipsum dummy text Simply dummy text</td>
+						<td>XYZ</td>
+						<td>DL1VC 2831</td>
+						<td>24589269211258</td>
+						<td>Lorem Ipsum</td>
+						<td>
+							<button class="btn btn-geen rounded-pill witdh100">Active</button>
+							<button class="btn btn-gay-border rounded-pill"><i class="fas fa-pencil-alt"></i> Edit</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem Ipsum dummy text Simply dummy text</td>
+						<td>XYZ</td>
+						<td>DL1VC 2831</td>
+						<td>24589269211258</td>
+						<td>Lorem Ipsum</td>
+						<td>
+							<button class="btn btn-geen rounded-pill witdh100">Active</button>
+							<button class="btn btn-gay-border rounded-pill"><i class="fas fa-pencil-alt"></i> Edit</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem Ipsum dummy text Simply dummy text</td>
+						<td>XYZ</td>
+						<td>DL1VC 2831</td>
+						<td>24589269211258</td>
+						<td>Lorem Ipsum</td>
+						<td>
+							<button class="btn btn-pink rounded-pill witdh100">Inactive</button>
+							<button class="btn btn-gay-border rounded-pill"><i class="fas fa-pencil-alt"></i> Edit</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem Ipsum dummy text Simply dummy text</td>
+						<td>XYZ</td>
+						<td>DL1VC 2831</td>
+						<td>24589269211258</td>
+						<td>Lorem Ipsum</td>
+						<td>
+							<button class="btn btn-pink rounded-pill witdh100">Inactive</button>
+							<button class="btn btn-gay-border rounded-pill"><i class="fas fa-pencil-alt"></i> Edit</button>
+						</td>
+					</tr>
+					
+				</tbody>
+				
+			  </table>
+			  <div class="clearfix mt10">
+				<button class="btn btn-gray btn-sm">Add New</button>
+			  </div>
+			</div>
+		</div>
+	</section>
+</section>
+
+
+<!--[/Dashboard]-->
+<div class="modal fade bd-example-modal-lg" id="barcode" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+		<div class="text-center btn-block"><img src="images/havells-red-logo.png" alt=""></div>
+	  </div>
+	  <div class="modal-body">
+		<table class="table barcode-table ">
+			<tbody>
+				<tr>
+					<th>Vehicle Name</th>
+					<td>Lorem ipsum dummy text</td>
+					<td rowspan="9">
+						<img src="images/barcode.png">
+					</td>
+				</tr>
+				<tr>
+					<th>Vehicle Description</th>
+					<td>Lorem ipsum dummy text.......</td>
+				</tr>
+				<tr>
+					<th>Vehicle Description</th>
+					<td>Lorem ipsum dummy text.......</td>
+				</tr>
+				<tr>
+					<th>Vehicle Size</th>
+					<td>Dummy text</td>
+				</tr>
+				<tr>
+					<th>Vehicle No.</th>
+					<td>DL3A0049</td>
+				</tr>
+				<tr>
+					<th>Transporter  Vendor Code</th>
+					<td>2568222222</td>
+				</tr>
+				<tr>
+					<th>Transporter Name</th>
+					<td>XYZ Trasporter</td>
+				</tr>
+				<tr>
+					<th>Company</th>
+					<td>Havells India Pvt. Ltd.</td>
+				</tr>
+				<tr>
+					<th>Location</th>
+					<td>Faridabad Warehouse</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="text-center">
+			<button class="btn btn-red btn-sm">Done</button>
+			<button class="btn btn-gray btn-sm">Print</button>
+		</div>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bd-example-modal-lg" id="mapdriver" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+		<h2 class="title">Map Driver</h2>
+	  </div>
+	  <div class="modal-body">
+		<table class="table barcode-table ">
+			<tbody>
+				<tr>
+					<th>Transporter Code</th>
+					<td>1258923944478</td>
+					<th>Transporter Name</th>
+					<td>XYZ Transporter</td>
+					<th>Vehicle No.</th>
+					<td>DL3A0049</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="row">
+			<div class="col-sm-5">
+				<div class="form-group">
+					<label>Driver Name</label>
+					<input class="form-control" type="text" placeholder="Driver Name">
+				</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="form-group">
+					<label>Driver Mobile Number</label>
+					<input class="form-control" type="text" placeholder="Driver Mobile Number">
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-red mt24 btn-block">Add</button>
+			</div>
+		</div>
+		<table class="table list-table table-bordered">
+			<thead>
+				<tr>
+					<th>Driver Name </th>
+					<th>Driver Mobile Number</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Lorem ipsum is dummy text</td>
+					<td>8800001111</td>
+				</tr>
+				<tr>
+					<td>Lorem ipsum is dummy text</td>
+					<td>8800001111</td>
+				</tr>
+				<tr>
+					<td>Lorem ipsum is dummy text</td>
+					<td>8800001111</td>
+				</tr>
+				<tr>
+					<td>Lorem ipsum is dummy text</td>
+					<td>8800001111</td>
+				</tr>
+			<tbody>
+		</table>
+		<div class="text-center mt20">
+			<button class="btn btn-red btn-sm">Done</button>
+			<button class="btn btn-gray btn-sm">Print</button>
+		</div>
+	  </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+<div class="modal fade bd-example-modal-lg" id="barcode2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+		<div class="text-center btn-block">
+		<h2 class="title">Barcode generate successfully</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+		</div>
+	  </div>
+	  <div class="modal-body text-center">
+		<figure><img src="images/barcode.png"></figure>
+		
+		<div class="text-center">
+			<button class="btn btn-red btn-sm">Done</button>
+			<button class="btn btn-gray btn-sm">Print</button>
+		</div>
+	  </div>
+    </div>
+  </div>
+</div>
